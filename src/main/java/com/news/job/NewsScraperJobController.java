@@ -1,4 +1,4 @@
-package com.news.jobs;
+package com.news.job;
 
 import com.news.exception.PageScrapingException;
 import com.news.scraper.ArticleScrapingHandler;

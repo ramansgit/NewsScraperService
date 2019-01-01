@@ -2,7 +2,7 @@ package com.news.app;
 
 import com.news.api.NewsScraperSearchApi;
 import com.news.api.NewsScraperSearchController;
-import com.news.jobs.NewsScraperJobController;
+import com.news.job.NewsScraperJobController;
 
 import spark.Spark;
 
@@ -30,7 +30,7 @@ public class NewsScraperApp {
 				return searchApi.getArticlesByTitleAndDescription(title, 
 						description);
 			}else {
-				return searchApi.getAuthorsList(Integer.parseInt(request.queryParams("start")), 
+				return searchApi.getAuthorList(Integer.parseInt(request.queryParams("start")), 
 						Integer.parseInt(request.queryParams("page")));
 			}
 		});
@@ -45,7 +45,7 @@ public class NewsScraperApp {
 	}
 
 	/**
-	 * allows CORS for calling api from differnt domain.
+	 * allows CORS for calling api from different domain.
 	 * @param origin
 	 * @param methods
 	 * @param headers

@@ -10,16 +10,18 @@ import com.news.util.ResponseUtil;
  * NewsScraperSearchController for getting search results
  *
  */
-public class NewsScraperSearchController implements NewsScraperSearchApi{
-	private static SearchHandler instance =  null;
+public class NewsScraperSearchController implements NewsScraperSearchApi {
+	private static SearchHandler instance = null;
+
 	public NewsScraperSearchController() {
 		instance = SearchHandler.getInstance();
 	}
+
 	/**
 	 * fetches list of authors
 	 */
 	@Override
-	public String getAuthorsList(int start, int pageSize) {
+	public String getAuthorList(int start, int pageSize) {
 		ApiResponse resp = null;
 		try {
 			resp = ResponseUtil.handleSuccessResp(instance.getPaginatedAuthorList(start, pageSize));
