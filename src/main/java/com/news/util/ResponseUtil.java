@@ -1,6 +1,14 @@
 package com.news.util;
 
 
+import javax.ws.rs.core.Response.Status;
+
+import com.news.exception.DocumentIndexingException;
+import com.news.exception.DocumentSearchException;
+import com.news.exception.PageScrapingException;
+import com.news.model.ApiResponse;
+import com.news.model.StatusResponse;
+
 public class ResponseUtil {
 
 	/**
