@@ -1,5 +1,7 @@
 package com.news.model;
 
+import org.apache.solr.client.solrj.beans.Field;
+
 public class Article {
 
 	public Article() {
@@ -12,10 +14,13 @@ public class Article {
 		this.title = title;
 		this.description = description;
 	}
-
+	@Field("articleId")
 	private String articleId;
+	@Field("author")
 	private String author;
+	@Field("title")
 	private String title;
+	@Field("description")
 	private String description;
 
 	public String getArticleId() {
